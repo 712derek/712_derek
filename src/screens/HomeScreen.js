@@ -23,17 +23,21 @@ const appearRight = keyframes`
 const PageWrapper = styled.section`
   width: 100vw;
   height: 100vh;
-  /* background: #1c1c1a; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(5, 5, 5, 0.9);
 `;
 
 const BackgroundImageTop = styled.img`
-  width: 100vw;
-  height: 100vh;
   z-index: -1;
   position: fixed;
   object-fit: cover;
   animation: ${appearRight} 1.2s cubic-bezier(0.3, 1, 0.3, 1.05);
+  @media (max-width: 768px) {
+    height: 100vh;
+    transform: rotate(-90deg);
+  }
 `;
 
 const BackgroundImageBottom = styled(BackgroundImageTop)`
