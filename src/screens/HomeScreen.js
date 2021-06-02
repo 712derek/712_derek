@@ -35,13 +35,17 @@ const BackgroundImageTop = styled.img`
   object-fit: cover;
   animation: ${appearRight} 1.2s cubic-bezier(0.3, 1, 0.3, 1.05);
   @media (max-width: 768px) {
-    height: 100vh;
+    height: 90vh;
     transform: rotate(-90deg);
+    animation: none;
   }
 `;
 
 const BackgroundImageBottom = styled(BackgroundImageTop)`
   animation: ${appearLeft} 1.2s cubic-bezier(0.3, 1, 0.3, 1.05);
+  @media (max-width: 768px) {
+    animation: none;
+  }
 `;
 
 const HomeScreen = () => {
