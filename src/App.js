@@ -1,8 +1,9 @@
 import React from "react";
 import GlobalStyle from "./globalStyles";
 
-import About from "./screens/About";
+import Teaser from "./screens/Teaser";
 import HomeScreen from "./screens/HomeScreen";
+import About from "./screens/About";
 import Projects from "./screens/Projects";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
       <GlobalStyle />
       <HomeScreen />
+      <Teaser />
       <About />
       <Projects />
     </>
