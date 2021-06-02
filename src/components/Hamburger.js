@@ -15,7 +15,7 @@ const HamburgerWrapper = styled.div`
 const BurgerBar = styled.div`
   width: 150px;
   height: 10px;
-  background-color: rgba(5, 5, 5, 0.9);
+  background-color: rgba(5, 5, 5, 0.5);
   margin: 5px;
 `;
 
@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
   const [hamburger, setHamburger] = useState(false);
 
   const HamburgerHandler = () => {
-    if (window.scrollY >= "400") {
+    if (window.scrollY >= "500") {
       setHamburger(true);
     } else {
       setHamburger(false);
