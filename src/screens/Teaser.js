@@ -9,7 +9,7 @@ const PageWrapper = styled.section`
 const Teaser = () => {
   return (
     <PageWrapper>
-      <h1>teaser</h1>
+      <h1>teaser testing test</h1>
     </PageWrapper>
   );
 };
