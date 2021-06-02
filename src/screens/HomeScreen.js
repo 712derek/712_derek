@@ -27,6 +27,7 @@ const PageWrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: rgba(5, 5, 5, 0.9);
+  overflow: hidden;
 `;
 
 const BackgroundImageTop = styled.img`
@@ -35,7 +36,7 @@ const BackgroundImageTop = styled.img`
   object-fit: cover;
   animation: ${appearRight} 1.2s cubic-bezier(0.3, 1, 0.3, 1.05);
   @media (max-width: 768px) {
-    height: 90vh;
+    height: 100vh;
     transform: rotate(-90deg);
     animation: none;
   }
