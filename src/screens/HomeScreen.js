@@ -51,7 +51,7 @@ const BackgroundImageBottom = styled(BackgroundImageTop)`
 
 const HomeScreen = () => {
   return (
-    <PageWrapper>
+    <PageWrapper id="home">
       <BackgroundImageTop src={BackgroundTop} />
       <BackgroundImageBottom src={BackgroundBottom} />
     </PageWrapper>

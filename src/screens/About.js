@@ -40,15 +40,15 @@ const AboutText = styled.p`
 
 const About = () => {
   return (
-    <PageWrapper>
-      <AboutCard>
+    <PageWrapper id="about">
+      {/* <AboutCard>
         <AboutImage src={Portrait} atl="portrait" />
         <AboutText>
           {aboutData.map((item, index) => (
             <p key={index}>{item.text}</p>
           ))}
         </AboutText>
-      </AboutCard>
+      </AboutCard> */}
     </PageWrapper>
   );
 };

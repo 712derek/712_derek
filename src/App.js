@@ -7,7 +7,6 @@ import About from "./screens/About";
 import Projects from "./screens/Projects";
 import Hamburger from "./components/Hamburger";
 import Dropdown from "./components/Dropdown";
-import DropdownTest from "./components/DropdownTest";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +20,9 @@ function App() {
       <HomeScreen />
       <Hamburger toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <DropdownTest isOpen={isOpen} toggle={toggle} />
       <Teaser />
-      {/* <About /> */}
       <Projects />
+      <About />
     </>
   );
 }

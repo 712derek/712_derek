@@ -1,7 +1,4 @@
-import ProjectImg1 from "../images/projects/portfolio.jpg";
-import ProjectImg2 from "../images/projects/amazon_clone.jpg";
-import ProjectImg3 from "../images/projects/styled_comp.jpg";
-import ProjectImg4 from "../images/projects/rn_guess_a_number.jpg";
+import ProjectImg1 from "../images/projects/first_portfolio.png";
 
 export const projectData = [
   {
@@ -12,29 +9,29 @@ export const projectData = [
     link: "https://github.com/712derek/portfolio",
     page: "github repository",
   },
-  {
-    title: "Amazon Clone",
-    image: ProjectImg2,
-    text: "As my first introduction to React I followed an instruction video to build an amazon clone.",
-    skill: "React, CSS, JS, Firebase",
-    link: "https://clone-ffb32.web.app/",
-    page: "webpage",
-  },
-  {
-    title: "React styled components - udemy",
-    image: ProjectImg3,
-    text: '"Ditch CSS stylesheets! Learn CSS in JS to quickly and cleanly style React components with the styled components library." To get a better understanding of modern React styling, I followed an extracurricular course on udemy.',
-    skill: "React, Styled Components",
-    link: "https://github.com/712derek/styled-components-v5",
-    page: "github repository",
-  },
-  {
-    title:
-      "React Native - The Practical Guide [2021 Edition] - udemy - work in progress",
-    image: ProjectImg4,
-    text: '"Use React Native and your React knowledge to build native iOS and Android Apps - incl. Push Notifications, Hooks, Redux" As an extracurricular course, I started this React-Native course to get a basic understanding of this library.',
-    skill: "React-Native, Hooks, Redux",
-    link: "https://github.com/712derek/rn-guess-a-number",
-    page: "github repository",
-  },
+  // {
+  //   title: "Amazon Clone",
+  //   image: ProjectImg2,
+  //   text: "As my first introduction to React I followed an instruction video to build an amazon clone.",
+  //   skill: "React, CSS, JS, Firebase",
+  //   link: "https://clone-ffb32.web.app/",
+  //   page: "webpage",
+  // },
+  // {
+  //   title: "React styled components - udemy",
+  //   image: ProjectImg3,
+  //   text: '"Ditch CSS stylesheets! Learn CSS in JS to quickly and cleanly style React components with the styled components library." To get a better understanding of modern React styling, I followed an extracurricular course on udemy.',
+  //   skill: "React, Styled Components",
+  //   link: "https://github.com/712derek/styled-components-v5",
+  //   page: "github repository",
+  // },
+  // {
+  //   title:
+  //     "React Native - The Practical Guide [2021 Edition] - udemy - work in progress",
+  //   image: ProjectImg4,
+  //   text: '"Use React Native and your React knowledge to build native iOS and Android Apps - incl. Push Notifications, Hooks, Redux" As an extracurricular course, I started this React-Native course to get a basic understanding of this library.',
+  //   skill: "React-Native, Hooks, Redux",
+  //   link: "https://github.com/712derek/rn-guess-a-number",
+  //   page: "github repository",
+  // },
 ];
