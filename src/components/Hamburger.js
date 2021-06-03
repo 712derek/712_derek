@@ -5,25 +5,40 @@ const HamburgerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: sticky;
   top: 0;
   width: 100%;
-  cursor: pointer;
+  z-index: 999;
 `;
 
-const BurgerBar = styled.div`
+const Hamburger = styled.div`
+  width: 150px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.15s ease-out;
+  &:hover {
+    filter: invert(0.9);
+  }
+`;
+
+const BurgerBar = styled.span`
   width: 150px;
   height: 10px;
   background-color: black;
   margin: 5px;
 `;
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ toggle }) => {
   return (
     <HamburgerWrapper>
-      <BurgerBar />
-      <BurgerBar />
+      <Hamburger onClick={toggle}>
+        <BurgerBar />
+        <BurgerBar />
+      </Hamburger>
     </HamburgerWrapper>
   );
 };
