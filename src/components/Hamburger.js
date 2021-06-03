@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 
 const HamburgerWrapper = styled.div`
   display: flex;
@@ -9,6 +9,7 @@ const HamburgerWrapper = styled.div`
   position: sticky;
   top: 0;
   width: 100%;
+  cursor: pointer;
 `;
 
 const BurgerBar = styled.div`
