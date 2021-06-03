@@ -27,9 +27,15 @@ const ProjectSection = styled.section`
 
 const ProjectWrapperRight = styled.div`
   float: right;
+
+  @media (max-width: 768px) {
+   float: none;
 `;
 const ProjectWrapperLeft = styled.div`
   float: left;
+  
+  @media (max-width: 768px) {
+   float: none;
 `;
 
 const ProjectContent = styled.div`

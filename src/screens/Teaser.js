@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const PageWrapper = styled.section`
   width: 100vw;
-  height: 50vh;
+  height: 33vh;
   /* position: relative; */
 `;
 
