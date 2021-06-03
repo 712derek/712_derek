@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Hamburger />
       <HomeScreen />
+      <Hamburger />
       <Teaser />
       <About />
       <Projects />

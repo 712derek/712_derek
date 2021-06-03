@@ -6,34 +6,21 @@ const HamburgerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  visibility: ${({ hamburger }) => (hamburger ? "" : "hidden")};
 `;
 
 const BurgerBar = styled.div`
   width: 150px;
   height: 10px;
-  background-color: rgba(5, 5, 5, 0.5);
+  background-color: black;
   margin: 5px;
 `;
 
 const HamburgerMenu = () => {
-  const [hamburger, setHamburger] = useState(false);
-
-  const HamburgerHandler = () => {
-    if (window.scrollY >= "500") {
-      setHamburger(true);
-    } else {
-      setHamburger(false);
-    }
-  };
-
-  window.addEventListener("scroll", HamburgerHandler);
-
   return (
-    <HamburgerWrapper hamburger={hamburger}>
+    <HamburgerWrapper>
       <BurgerBar />
       <BurgerBar />
     </HamburgerWrapper>
