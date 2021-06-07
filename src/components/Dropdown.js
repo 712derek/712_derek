@@ -28,6 +28,7 @@ const DropdownContainer = styled.div`
 const DropdownLink = styled(Link)`
   color: #fff;
   font-size: 6rem;
+  padding: 1rem;
   text-decoration: none;
   list-style: none;
   color: #fff;
@@ -36,6 +37,13 @@ const DropdownLink = styled(Link)`
 
   &:hover {
     transform: rotate(7deg);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    &:hover {
+      transform: none;
+    }
   }
 `;
 

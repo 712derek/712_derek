@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GlobalStyle from "./globalStyles";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import Teaser from "./screens/Teaser";
 import HomeScreen from "./screens/HomeScreen";
 import About from "./screens/About";
 import Projects from "./screens/Projects";
@@ -20,9 +20,10 @@ function App() {
       <HomeScreen />
       <Hamburger toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
-      <Teaser />
-      <Projects />
-      <About />
+      <Router>
+        <Projects />
+        <About />
+      </Router>
     </>
   );
 }
