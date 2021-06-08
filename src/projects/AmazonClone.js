@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import image from "../images/projects/first_portfolio.png";
+import image from "../images/projects/amazon_clone.png";
 
 const Section = styled.section`
   @media (max-width: 768px) {
@@ -15,9 +15,8 @@ const Section = styled.section`
 
 const Container = styled.div`
   padding: 1em 0;
-  float: left;
+  float: right;
   width: 70%;
-
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -38,6 +37,8 @@ const ContentOverlay = styled.div`
 
 const ContentImage = styled.img`
   width: 100%;
+  border-bottom: solid 1px;
+  border-color: rgba(0, 0, 0, 0.1);
 `;
 
 const ContentDetails = styled.div`
@@ -94,14 +95,14 @@ const Content = styled.div`
 
 const details = [
   {
-    title: "React Portfolio",
-    text: "As part of the Intec front-end developer course, I built this portfolio website. The assignment was to build a functional and aesthetic website using the React library. During this process I learned to build a website with Components. I kept the use of external Components to a minimum to be able to push myself to learn as much coding as possible. Building this website also gave me an introduction into using react hooks. Instead of using the conventional styling in css files I used styled components to style my portfolio.",
+    title: "Amazon Clone",
+    text: "For my first introduction to React I followed an instruction video to build an amazon clone. Here I learned important basics of components and how to structure my projects.",
     image: image,
-    link: { pathname: "https://www.712derek.com" },
+    link: { pathname: "https://clone-ffb32.web.app/" },
   },
 ];
 
-const Portfolio = () => {
+const AmazonClone = () => {
   return (
     <Section>
       <Container>
@@ -124,4 +125,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default AmazonClone;

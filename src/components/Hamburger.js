@@ -28,7 +28,7 @@ const Hamburger = styled.div`
 const BurgerBar = styled.span`
   width: 150px;
   height: 10px;
-  background-color: black;
+  background: black;
   margin: 5px;
 `;
 
