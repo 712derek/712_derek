@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import "./style.css";
 
 import Portfolio from "../projects/Portfolio";
 import AmazonClone from "../projects/AmazonClone";
@@ -17,8 +15,6 @@ const Projects = () => {
   return (
     <ProjectSection id="projects">
       <BlankSection style={{ height: "15vh" }} />
-      <Portfolio />
-      <AmazonClone />
       <Portfolio />
       <AmazonClone />
     </ProjectSection>

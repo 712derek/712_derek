@@ -3,10 +3,11 @@ import GlobalStyle from "./globalStyles";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import HomeScreen from "./screens/HomeScreen";
-import About from "./screens/About";
-import Projects from "./screens/Projects";
 import Hamburger from "./components/Hamburger";
 import Dropdown from "./components/Dropdown";
+import Projects from "./screens/Projects";
+import About from "./screens/About";
+import Contact from "./screens/Contact";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ function App() {
       <Router>
         <Projects />
         <About />
+        <Contact />
       </Router>
     </>
   );
