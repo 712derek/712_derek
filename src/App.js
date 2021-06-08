@@ -23,7 +23,7 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Router>
         <Projects />
-        <About />
+        {/* <About /> */}
         <Contact />
       </Router>
     </>

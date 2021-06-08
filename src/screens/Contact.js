@@ -9,39 +9,55 @@ const PageWrapper = styled.section`
   background: black;
   justify-content: space-between;
 
+  h2 {
+    color: #fff;
+    font-size: 3rem;
+  }
   h6 {
     color: #fff;
     font-size: 1em;
     margin-bottom: 1rem;
   }
-  h2 {
-    color: #fff;
-    font-size: 3rem;
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 `;
 
 const PageTitle = styled.h1`
-  padding: 2rem 0;
+  padding-top: 5rem;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: underline;
+  text-decoration: overline;
   font-size: 8rem;
   color: #fff;
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
 `;
 
 const InfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ContactInfo = styled.div`
   padding: 0 3rem;
 `;
-const SocialInfo = styled(ContactInfo)``;
+const SocialInfo = styled(ContactInfo)`
+  text-align: right;
+  margin-top: 4rem;
+`;
 
 const Footer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 2rem;
   padding: 0 3rem;
 `;
@@ -65,8 +81,8 @@ const About = () => {
         </SocialInfo>
       </InfoWrapper>
       <Footer>
-        <h2>CV</h2>
         <h2>Home</h2>
+        <h2>CV</h2>
         <h2>Contact</h2>
       </Footer>
     </PageWrapper>
