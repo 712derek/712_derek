@@ -21,11 +21,11 @@ const Hamburger = styled.div`
   cursor: pointer;
   transition: 0.15s ease-out;
   &:hover {
-    filter: invert(0.9);
+    filter: invert(0.99);
   }
 `;
 
-const BurgerBar = styled.span`
+const BurgerBar = styled.div`
   width: 150px;
   height: 10px;
   background: black;

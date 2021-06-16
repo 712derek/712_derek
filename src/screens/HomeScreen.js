@@ -26,7 +26,6 @@ const PageWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(5, 5, 5, 0.9);
   overflow: hidden;
 `;
 
@@ -49,11 +48,19 @@ const BackgroundImageBottom = styled(BackgroundImageTop)`
   }
 `;
 
+const BackgroundColor = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: rgb(216, 178, 252);
+  z-index: -2;
+`;
+
 const HomeScreen = () => {
   return (
     <PageWrapper id="home">
       <BackgroundImageTop src={BackgroundTop} />
       <BackgroundImageBottom src={BackgroundBottom} />
+      <BackgroundColor />
     </PageWrapper>
   );
 };

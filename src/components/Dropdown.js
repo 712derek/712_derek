@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
-import { navData } from "../data/NavData";
-
 const DropdownSection = styled.section`
   display: flex;
   justify-content: center;
@@ -15,14 +13,14 @@ const DropdownContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  /* z-index: ${({ isOpen }) => (isOpen ? "999" : "-1")}; */
   z-index: 999;
-  width: 90vw;
-  height: 90vh;
+  width: 80vw;
+  height: 80vh;
   background: rgba(0, 0, 0);
   transition: 0.3s ease-out;
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100")};
+  height: ${({ isOpen }) => (isOpen ? "-80vh" : "")};
 `;
 
 const DropdownLink = styled(Link)`
@@ -46,6 +44,25 @@ const DropdownLink = styled(Link)`
     }
   }
 `;
+
+const navData = [
+  {
+    title: "HOME",
+    link: "home",
+  },
+  {
+    title: "PROJECTS",
+    link: "projects",
+  },
+  {
+    title: "CONTACT",
+    link: "contact",
+  },
+  {
+    title: "ABOUT",
+    link: "about",
+  },
+];
 
 const Dropdown = ({ isOpen, toggle }) => {
   return (

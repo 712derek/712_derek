@@ -18,12 +18,16 @@ const PageWrapper = styled.section`
   }
 
   h2 {
-    color: #fff;
+    color: rgb(216, 178, 252);
     font-size: 3rem;
     cursor: pointer;
+    transition: 0.15s ease-out;
+    &:hover {
+      color: #fff;
+    }
   }
   h6 {
-    color: #fff;
+    color: rgb(216, 178, 252);
     font-size: 1em;
     margin-bottom: 1rem;
   }
@@ -41,7 +45,7 @@ const PageTitle = styled.h1`
   text-transform: uppercase;
   text-decoration: overline;
   font-size: 8rem;
-  color: #fff;
+  color: rgb(216, 178, 252);
   @media (max-width: 768px) {
     font-size: 4rem;
   }
@@ -86,6 +90,21 @@ const contactInfo = [
   },
 ];
 
+const socialInfo = [
+  {
+    site: "LinkedIn",
+    link: { pathname: "https://www.linkedin.com/in/derekterijdt/" },
+  },
+  {
+    site: "GitHub",
+    link: { pathname: "https://github.com/712derek" },
+  },
+  {
+    site: "Instgram",
+    link: { pathname: "https://www.instagram.com/712_derek/" },
+  },
+];
+
 const About = () => {
   return (
     <PageWrapper id="contact">
@@ -103,24 +122,11 @@ const About = () => {
         ))}
         <SocialInfo>
           <h6>Follow</h6>
-          <Link
-            to={{ pathname: "https://www.linkedin.com/in/derekterijdt/" }}
-            target="_blank"
-          >
-            <h2>LinkedIn</h2>
-          </Link>
-          <Link
-            to={{ pathname: "https://github.com/712derek" }}
-            target="_blank"
-          >
-            <h2>GitHub</h2>
-          </Link>
-          <Link
-            to={{ pathname: "https://www.instagram.com/712_derek/" }}
-            target="_blank"
-          >
-            <h2>Instagram</h2>
-          </Link>
+          {socialInfo.map((item, index) => (
+            <Link key={index} to={item.link} target="_blank">
+              <h2>{item.site}</h2>
+            </Link>
+          ))}
         </SocialInfo>
       </InfoWrapper>
       <Footer>

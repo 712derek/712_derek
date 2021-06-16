@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import image from "../images/projects/first_portfolio.png";
+import image from "../images/projects/sound.png";
+import portfolio from "../docs/Portfolio.pdf";
 
 const Section = styled.section`
   @media (max-width: 768px) {
@@ -14,12 +15,15 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  padding: 1em 0;
-  float: left;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  padding: 1rem 0;
+  float: right;
   width: 70%;
 
   @media (max-width: 768px) {
     width: 100%;
+    margin-right: 0rem;
   }
 `;
 
@@ -62,6 +66,10 @@ const ContentDetails = styled.div`
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
+  h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
 
   p {
     color: #fff;
@@ -94,14 +102,15 @@ const Content = styled.div`
 
 const details = [
   {
-    title: "React Portfolio",
-    text: "As part of the Intec front-end developer course, I built this portfolio website. The assignment was to build a functional and aesthetic website using the React library. During this process I learned to build a website with Components. I kept the use of external Components to a minimum to be able to push myself to learn as much coding as possible. Building this website also gave me an introduction into using react hooks. Instead of using the conventional styling in css files I used styled components to style my portfolio.",
+    title: "Spatial Design Portfolio",
+    subtitle: "Biography",
+    text: "My conceptual works in spatial design, scenography and installation art start from an interestin the tensions between people and their spatial environment. My designs can be a disruptive or binding factor. From spaces, I create situations that are defined by questions of a rational or intuitive nature. Space and time thus make a, often temporary, bow to my character and way of think- ing. Thereby a situation unfolds that I can partially claim.",
     image: image,
-    link: { pathname: "https://www.712derek.com" },
+    link: portfolio,
   },
 ];
 
-const Portfolio = () => {
+const InteriorDesign = () => {
   return (
     <Section>
       <Container>
@@ -111,6 +120,7 @@ const Portfolio = () => {
               <ContentOverlay />
               <ContentDetails>
                 <h3>{item.title}</h3>
+                <h5>- {item.subtitle} -</h5>
                 <ContentText>
                   <p>{item.text}</p>
                 </ContentText>
@@ -124,4 +134,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default InteriorDesign;

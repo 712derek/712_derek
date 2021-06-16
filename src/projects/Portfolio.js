@@ -14,12 +14,15 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  padding: 1em 0;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  padding: 1rem 0;
   float: left;
   width: 70%;
 
   @media (max-width: 768px) {
     width: 100%;
+    margin-left: 0rem;
   }
 `;
 

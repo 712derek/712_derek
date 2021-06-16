@@ -14,11 +14,13 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  padding: 1em 0;
+  padding: 1rem 0;
+  margin-right: 2rem;
   float: right;
   width: 70%;
   @media (max-width: 768px) {
     width: 100%;
+    margin-right: 0rem;
   }
 `;
 
