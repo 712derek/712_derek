@@ -34,7 +34,8 @@ const PageWrapper = styled.section`
 
   @media (max-width: 768px) {
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      /* margin-bottom: 5px; */
     }
   }
 `;
@@ -59,22 +60,33 @@ const InfoWrapper = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 `;
 
 const ContactInfo = styled.div`
   padding: 0 3rem;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 `;
 const SocialInfo = styled(ContactInfo)`
   text-align: right;
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
 `;
 
 const Footer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 2rem;
   padding: 0 3rem;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
 `;
 
 const Link = styled(SocialLink)`
@@ -136,7 +148,7 @@ const About = () => {
         <Link to={{ pathname: cv }} target="_blank">
           <h2>CV</h2>
         </Link>
-        <h2>Contact</h2>
+        <h2>About</h2>
       </Footer>
     </PageWrapper>
   );
