@@ -1,17 +1,6 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-
-import Portfolio from "../projects/Portfolio";
-import AmazonClone from "../projects/AmazonClone";
-
-const ProjectSection = styled.section`
-  width: 100vw;
-  height: 100%;
-`;
-
-const BlankSection = styled.div``;
 
 function FadeInWhenVisible({ children }) {
   const controls = useAnimation();
@@ -39,20 +28,4 @@ function FadeInWhenVisible({ children }) {
   );
 }
 
-const Projects = () => {
-  return (
-    <ProjectSection id="projects">
-      <BlankSection style={{ height: "15vh" }} />
-      <div>
-        <FadeInWhenVisible>
-          <Portfolio />
-        </FadeInWhenVisible>
-        <FadeInWhenVisible>
-          <AmazonClone />
-        </FadeInWhenVisible>
-      </div>
-    </ProjectSection>
-  );
-};
-
-export default Projects;
+export default FadeInWhenVisible;
