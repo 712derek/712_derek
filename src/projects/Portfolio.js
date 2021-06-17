@@ -65,7 +65,10 @@ const ContentDetails = styled.div`
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
-
+  h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
   p {
     color: #fff;
     text-align: justify;
@@ -98,6 +101,7 @@ const Content = styled.div`
 const details = [
   {
     title: "React Portfolio",
+    subtitle: "click for website",
     text: "As part of the Intec front-end developer course, I built this portfolio website. The assignment was to build a functional and aesthetic website using the React library. During this process I learned to build a website with Components. I kept the use of external Components to a minimum to be able to push myself to learn as much coding as possible. Building this website also gave me an introduction into using react hooks. Instead of using the conventional styling in css files I used styled components to style my portfolio.",
     image: image,
     link: { pathname: "https://www.712derek.com" },
@@ -114,6 +118,7 @@ const Portfolio = () => {
               <ContentOverlay />
               <ContentDetails>
                 <h3>{item.title}</h3>
+                <h5>- {item.subtitle} -</h5>
                 <ContentText>
                   <p>{item.text}</p>
                 </ContentText>

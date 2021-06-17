@@ -21,7 +21,7 @@ const Hamburger = styled.div`
   cursor: pointer;
   transition: 0.15s ease-out;
   &:hover {
-    filter: invert(0.99);
+    transform: scaleX(1.5);
   }
 `;
 
@@ -30,6 +30,7 @@ const BurgerBar = styled.div`
   height: 10px;
   background: black;
   margin: 5px;
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 `;
 
 const HamburgerMenu = ({ toggle }) => {

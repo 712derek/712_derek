@@ -101,7 +101,7 @@ const Content = styled.div`
 const details = [
   {
     title: "React Native - The Practical Guide",
-    subtitle: "Work in progress",
+    subtitle: "Work in progress - click for github repository",
     text: '"Use React Native and your React knowledge to build native iOS and Android Apps - incl. Push Notifications, Hooks, Redux" As an extracurricular course, I started this React-Native course to get a basic understanding of this library.',
     image: image,
     link: { pathname: "https://www.712derek.com" },
