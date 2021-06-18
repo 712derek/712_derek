@@ -20,11 +20,6 @@ const PageWrapper = styled.section`
   h2 {
     color: rgb(216, 178, 252);
     font-size: 3rem;
-    cursor: pointer;
-    transition: 0.15s ease-out;
-    &:hover {
-      color: #fff;
-    }
   }
   h6 {
     color: rgb(216, 178, 252);
@@ -35,7 +30,6 @@ const PageWrapper = styled.section`
   @media (max-width: 768px) {
     h2 {
       font-size: 2rem;
-      /* margin-bottom: 5px; */
     }
   }
 `;
@@ -93,6 +87,23 @@ const Link = styled(SocialLink)`
   text-decoration: none;
 `;
 
+const HoverLink = styled.div`
+  cursor: pointer;
+  &:hover {
+    h2 {
+      color: #fff;
+    }
+    transition: 0.15s ease-out;
+    transform: skewX(7deg) skewY(7deg);
+  }
+`;
+
+const HoverLinkSmall = styled(HoverLink)`
+  &:hover {
+    transform: skewX(-2deg) skewY(-2deg);
+  }
+`;
+
 const contactInfo = [
   {
     name: "Derek te Rijdt",
@@ -126,9 +137,13 @@ const About = () => {
           <ContactInfo key={index}>
             <h6>Contact</h6>
             <h2>{item.name}</h2>
-            <h2>{item.email}</h2>
+            <HoverLinkSmall>
+              <h2>{item.email}</h2>
+            </HoverLinkSmall>
             <a href={item.telLink}>
-              <h2>{item.tel}</h2>
+              <HoverLinkSmall>
+                <h2>{item.tel}</h2>
+              </HoverLinkSmall>
             </a>
           </ContactInfo>
         ))}
@@ -136,19 +151,27 @@ const About = () => {
           <h6>Follow</h6>
           {socialInfo.map((item, index) => (
             <Link key={index} to={item.link} target="_blank">
-              <h2>{item.site}</h2>
+              <HoverLink>
+                <h2>{item.site}</h2>
+              </HoverLink>
             </Link>
           ))}
         </SocialInfo>
       </InfoWrapper>
       <Footer>
         <ScrollLink to="home" smooth={true} duration={750}>
-          <h2>Home</h2>
+          <HoverLink>
+            <h2>Home</h2>
+          </HoverLink>
         </ScrollLink>
         <Link to={{ pathname: cv }} target="_blank">
-          <h2>CV</h2>
+          <HoverLink>
+            <h2>CV</h2>
+          </HoverLink>
         </Link>
-        <h2>About</h2>
+        <HoverLink>
+          <h2>About</h2>
+        </HoverLink>
       </Footer>
     </PageWrapper>
   );

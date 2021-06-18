@@ -11,6 +11,7 @@ const Section = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -1rem;
   }
 `;
 
@@ -24,6 +25,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin-right: 0rem;
+    padding: 0;
   }
 `;
 
@@ -98,12 +100,51 @@ const Content = styled.div`
       opacity: 1;
     }
   }
+  @media (hover: none) {
+    ${ContentOverlay} {
+      display: none;
+    }
+    ${ContentDetails} {
+      display: none;
+    }
+  }
+`;
+
+const MobileSection = styled(Section)`
+  margin-top: 0;
+`;
+
+const MobileContent = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    background: #fff;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+
+    h3 {
+      font-weight: 100;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+    }
+  }
 `;
 
 const details = [
   {
     title: "Spatial Design Portfolio",
-    subtitle: "Biography",
+    subtitle: "Biography - click for PDF",
+    mobileSub: "Biography - tap for PDF",
     text: "My conceptual works in spatial design, scenography and installation art start from an interestin the tensions between people and their spatial environment. My designs can be a disruptive or binding factor. From spaces, I create situations that are defined by questions of a rational or intuitive nature. Space and time thus make a, often temporary, bow to my character and way of think- ing. Thereby a situation unfolds that I can partially claim.",
     image: image,
     link: portfolio,
@@ -112,25 +153,36 @@ const details = [
 
 const InteriorDesign = () => {
   return (
-    <Section>
-      <Container>
-        {details.map((item, index) => (
-          <Content key={index}>
-            <Link to={item.link} target="_blank">
-              <ContentOverlay />
-              <ContentDetails>
-                <h3>{item.title}</h3>
-                <h5>- {item.subtitle} -</h5>
-                <ContentText>
-                  <p>{item.text}</p>
-                </ContentText>
-              </ContentDetails>
-              <ContentImage src={item.image} />
-            </Link>
-          </Content>
-        ))}
-      </Container>
-    </Section>
+    <>
+      {details.map((item, index) => (
+        <>
+          <Section>
+            <Container>
+              <Content key={index}>
+                <Link to={item.link} target="_blank">
+                  <ContentOverlay />
+                  <ContentDetails>
+                    <h3>{item.title}</h3>
+                    <h5>- {item.subtitle} -</h5>
+                    <ContentText>
+                      <p>{item.text}</p>
+                    </ContentText>
+                  </ContentDetails>
+                  <ContentImage src={item.image} />
+                </Link>
+              </Content>
+            </Container>
+          </Section>
+          <MobileSection>
+            <MobileContent>
+              <h5>- {item.mobileSub} -</h5>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </MobileContent>
+          </MobileSection>
+        </>
+      ))}
+    </>
   );
 };
 

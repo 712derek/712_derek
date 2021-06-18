@@ -34,7 +34,8 @@ const DropdownLink = styled(Link)`
   transition: 0.15s ease-out;
 
   &:hover {
-    transform: rotate(7deg);
+    /* transform: rotate(7deg); */
+    transform: skewX(7deg) skewY(7deg);
   }
 
   @media (max-width: 768px) {
@@ -57,10 +58,6 @@ const navData = [
   {
     title: "CONTACT",
     link: "contact",
-  },
-  {
-    title: "ABOUT",
-    link: "about",
   },
 ];
 

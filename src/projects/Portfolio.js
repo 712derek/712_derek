@@ -10,6 +10,7 @@ const Section = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -1rem;
   }
 `;
 
@@ -23,6 +24,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0rem;
+    padding: 0;
   }
 `;
 
@@ -96,12 +98,51 @@ const Content = styled.div`
       opacity: 1;
     }
   }
+  @media (hover: none) {
+    ${ContentOverlay} {
+      display: none;
+    }
+    ${ContentDetails} {
+      display: none;
+    }
+  }
+`;
+
+const MobileSection = styled(Section)`
+  margin-top: 0;
+`;
+
+const MobileContent = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    background: #fff;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+
+    h3 {
+      font-weight: 100;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+    }
+  }
 `;
 
 const details = [
   {
     title: "React Portfolio",
-    subtitle: "click for website",
+    subtitle: "click image for website",
+    mobileSub: "tap image for website",
     text: "As part of the Intec front-end developer course, I built this portfolio website. The assignment was to build a functional and aesthetic website using the React library. During this process I learned to build a website with Components. I kept the use of external Components to a minimum to be able to push myself to learn as much coding as possible. Building this website also gave me an introduction into using react hooks. Instead of using the conventional styling in css files I used styled components to style my portfolio.",
     image: image,
     link: { pathname: "https://www.712derek.com" },
@@ -110,25 +151,36 @@ const details = [
 
 const Portfolio = () => {
   return (
-    <Section>
-      <Container>
-        {details.map((item, index) => (
-          <Content key={index}>
-            <Link to={item.link} target="_blank">
-              <ContentOverlay />
-              <ContentDetails>
-                <h3>{item.title}</h3>
-                <h5>- {item.subtitle} -</h5>
-                <ContentText>
-                  <p>{item.text}</p>
-                </ContentText>
-              </ContentDetails>
-              <ContentImage src={item.image} />
-            </Link>
-          </Content>
-        ))}
-      </Container>
-    </Section>
+    <>
+      {details.map((item, index) => (
+        <>
+          <Section>
+            <Container>
+              <Content key={index}>
+                <Link to={item.link} target="_blank">
+                  <ContentOverlay />
+                  <ContentDetails>
+                    <h3>{item.title}</h3>
+                    <h5>- {item.subtitle} -</h5>
+                    <ContentText>
+                      <p>{item.text}</p>
+                    </ContentText>
+                  </ContentDetails>
+                  <ContentImage src={item.image} />
+                </Link>
+              </Content>
+            </Container>
+          </Section>
+          <MobileSection>
+            <MobileContent>
+              <h5>- {item.mobileSub} -</h5>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </MobileContent>
+          </MobileSection>
+        </>
+      ))}
+    </>
   );
 };
 

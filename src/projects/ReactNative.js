@@ -10,6 +10,7 @@ const Section = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -1rem;
   }
 `;
 
@@ -20,8 +21,9 @@ const Container = styled.div`
   width: 35%;
 
   @media (max-width: 768px) {
-    width: 66%;
+    width: 100%;
     margin-left: 0rem;
+    padding: 0;
   }
 `;
 
@@ -96,39 +98,89 @@ const Content = styled.div`
       opacity: 1;
     }
   }
+  @media (hover: none) {
+    ${ContentOverlay} {
+      display: none;
+    }
+    ${ContentDetails} {
+      display: none;
+    }
+  }
+`;
+
+const MobileSection = styled(Section)`
+  margin-top: 0;
+`;
+
+const MobileContent = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    background: #fff;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+
+    h3 {
+      font-weight: 100;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+    }
+  }
 `;
 
 const details = [
   {
     title: "React Native - The Practical Guide",
     subtitle: "Work in progress - click for github repository",
+    mobileSub: "Work in progress - tap for github repository",
     text: '"Use React Native and your React knowledge to build native iOS and Android Apps - incl. Push Notifications, Hooks, Redux" As an extracurricular course, I started this React-Native course to get a basic understanding of this library.',
     image: image,
-    link: { pathname: "https://www.712derek.com" },
+    link: { pathname: "https://github.com/712derek/rn-guess-a-number" },
   },
 ];
 
 const ReactNative = () => {
   return (
-    <Section>
-      <Container>
-        {details.map((item, index) => (
-          <Content key={index}>
-            <Link to={item.link} target="_blank">
-              <ContentOverlay />
-              <ContentDetails>
-                <h3>{item.title}</h3>
-                <h5>- {item.subtitle} -</h5>
-                <ContentText>
-                  <p>{item.text}</p>
-                </ContentText>
-              </ContentDetails>
-              <ContentImage src={item.image} />
-            </Link>
-          </Content>
-        ))}
-      </Container>
-    </Section>
+    <>
+      {details.map((item, index) => (
+        <>
+          <Section>
+            <Container>
+              <Content key={index}>
+                <Link to={item.link} target="_blank">
+                  <ContentOverlay />
+                  <ContentDetails>
+                    <h3>{item.title}</h3>
+                    <h5>- {item.subtitle} -</h5>
+                    <ContentText>
+                      <p>{item.text}</p>
+                    </ContentText>
+                  </ContentDetails>
+                  <ContentImage src={item.image} />
+                </Link>
+              </Content>
+            </Container>
+          </Section>
+          <MobileSection>
+            <MobileContent>
+              <h5>- {item.mobileSub} -</h5>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </MobileContent>
+          </MobileSection>
+        </>
+      ))}
+    </>
   );
 };
 

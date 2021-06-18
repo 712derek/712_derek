@@ -11,6 +11,11 @@ const ProjectSection = styled.section`
   height: 100%;
   padding-top: 100px;
   padding-bottom: 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
 `;
 
 const Projects = () => {
