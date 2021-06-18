@@ -128,6 +128,7 @@ const MobileContent = styled.div`
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
       text-transform: uppercase;
+      text-align: center;
     }
     h5 {
       margin-bottom: 1rem;

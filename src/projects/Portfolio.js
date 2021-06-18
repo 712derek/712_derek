@@ -145,7 +145,7 @@ const details = [
     mobileSub: "tap image for website",
     text: "As part of the Intec front-end developer course, I built this portfolio website. The assignment was to build a functional and aesthetic website using the React library. During this process I learned to build a website with Components. I kept the use of external Components to a minimum to be able to push myself to learn as much coding as possible. Building this website also gave me an introduction into using react hooks. Instead of using the conventional styling in css files I used styled components to style my portfolio.",
     image: image,
-    link: { pathname: "https://www.712derek.com" },
+    link: { pathname: "https://712portfolio.netlify.app/" },
   },
 ];
 
