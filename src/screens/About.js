@@ -31,17 +31,6 @@ const ContentImage = styled.img`
   /* border-radius: 50%; */
 `;
 
-const SocialMedia = styled.div`
-  flex: 1;
-  padding: 1rem;
-  color: #fff;
-
-  h3 {
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-`;
-
 const details = [
   {
     about01:

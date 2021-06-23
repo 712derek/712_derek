@@ -101,9 +101,11 @@ const Content = styled.div`
   @media (hover: none) {
     ${ContentOverlay} {
       display: none;
+      opacity: 0;
     }
     ${ContentDetails} {
       display: none;
+      opacity: 0;
     }
   }
 `;
@@ -152,11 +154,11 @@ const details = [
 const Portfolio = () => {
   return (
     <>
-      {details.map((item, index) => (
-        <>
+      {details.map((item, i) => (
+        <div key={i}>
           <Section>
             <Container>
-              <Content key={index}>
+              <Content>
                 <Link to={item.link} target="_blank">
                   <ContentOverlay />
                   <ContentDetails>
@@ -178,7 +180,7 @@ const Portfolio = () => {
               <p>{item.text}</p>
             </MobileContent>
           </MobileSection>
-        </>
+        </div>
       ))}
     </>
   );

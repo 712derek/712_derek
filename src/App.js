@@ -6,7 +6,6 @@ import HomeScreen from "./screens/HomeScreen";
 import Hamburger from "./components/Hamburger";
 import Dropdown from "./components/Dropdown";
 import Projects from "./screens/Projects";
-import About from "./screens/About";
 import Contact from "./screens/Contact";
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Router>
         <Projects />
-        {/* <About /> */}
         <Contact />
       </Router>
     </>

@@ -22,8 +22,8 @@ const Projects = () => {
   return (
     <ProjectSection id="projects">
       <Portfolio />
-      <AmazonClone />
       <ReactNative />
+      <AmazonClone />
       <InteriorDesign />
     </ProjectSection>
   );

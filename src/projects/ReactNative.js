@@ -15,9 +15,9 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  margin-left: 10rem;
+  margin-right: 10rem;
   padding: 1rem 0;
-  float: left;
+  float: right;
   width: 35%;
 
   @media (max-width: 768px) {
@@ -101,9 +101,11 @@ const Content = styled.div`
   @media (hover: none) {
     ${ContentOverlay} {
       display: none;
+      opacity: 0;
     }
     ${ContentDetails} {
       display: none;
+      opacity: 0;
     }
   }
 `;
@@ -153,11 +155,11 @@ const details = [
 const ReactNative = () => {
   return (
     <>
-      {details.map((item, index) => (
-        <>
+      {details.map((item, i) => (
+        <div key={i}>
           <Section>
             <Container>
-              <Content key={index}>
+              <Content>
                 <Link to={item.link} target="_blank">
                   <ContentOverlay />
                   <ContentDetails>
@@ -179,7 +181,7 @@ const ReactNative = () => {
               <p>{item.text}</p>
             </MobileContent>
           </MobileSection>
-        </>
+        </div>
       ))}
     </>
   );

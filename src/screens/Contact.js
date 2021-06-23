@@ -90,11 +90,11 @@ const Link = styled(SocialLink)`
 const HoverLink = styled.div`
   cursor: pointer;
   &:hover {
-    h2 {
-      color: #fff;
-    }
     transition: 0.15s ease-out;
     transform: skewX(7deg) skewY(7deg);
+  }
+  @media (hover: none) {
+    display: contents;
   }
 `;
 
@@ -123,7 +123,7 @@ const socialInfo = [
     link: { pathname: "https://github.com/712derek" },
   },
   {
-    site: "Instgram",
+    site: "Instagram",
     link: { pathname: "https://www.instagram.com/712_derek/" },
   },
 ];
@@ -133,8 +133,8 @@ const About = () => {
     <PageWrapper id="contact">
       <PageTitle>Reach me</PageTitle>
       <InfoWrapper>
-        {contactInfo.map((item, index) => (
-          <ContactInfo key={index}>
+        {contactInfo.map((item, contactInfo) => (
+          <ContactInfo key={contactInfo}>
             <h6>Contact</h6>
             <h2>{item.name}</h2>
             <HoverLinkSmall>
