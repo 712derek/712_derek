@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link as SocialLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
-import cv from "../docs/CV.pdf";
+import cv from "../docs/CV - Derek te Rijdt EN.pdf";
 
 const PageWrapper = styled.section`
   width: 100vw;

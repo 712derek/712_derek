@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import image from "../images/projects/sound.png";
+import image from "../images/projects/sound.jpg";
 import portfolio from "../docs/Portfolio.pdf";
 
 const Section = styled.section`

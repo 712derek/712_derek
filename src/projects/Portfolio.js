@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import image from "../images/projects/first_portfolio.png";
+import image from "../images/projects/first_portfolio.jpg";
 
 const Section = styled.section`
   @media (max-width: 768px) {
